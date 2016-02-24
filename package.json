@@ -1,0 +1,36 @@
+{
+  "name": "janus-cluster",
+  "description": "",
+  "version": "0.1.0",
+  "author": "Cargomedia",
+  "license": "MIT",
+  "main": "",
+  "bin": {
+    "cm-janus": "./bin/janus-cluster"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cargomedia/janus-cluster.git"
+  },
+  "scripts": {
+    "test": "$(npm bin)/mocha",
+    "test-codecov": "$(npm bin)/istanbul cover $(npm bin)/_mocha -- -R spec && cat ./coverage/coverage.json | $(npm bin)/codecov"
+  },
+  "dependencies": {
+    "bluebird": "~3.0.0",
+    "minimist": "^1.2.0",
+    "underscore": "^1.8.3",
+    "ws": "~0.8.0"
+  },
+  "devDependencies": {
+    "chai": "~2.1.2",
+    "chai-as-promised": "^5.1.0",
+    "codecov.io": "^0.1.6",
+    "istanbul": "^0.4.0",
+    "mocha": "~1.21.4",
+    "mock-socket": "^0.8.2",
+    "nock": "^3.0.0",
+    "sinon": "^1.17.2"
+  }
+}
