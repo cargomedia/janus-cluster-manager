@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+var Cluster = require('../lib/Cluster');
+var HttpServer = require('../lib/HttpServer');
+
+var cluster = new Cluster();
+var httpServer = new HttpServer(8080, cluster);
+httpServer.start();
