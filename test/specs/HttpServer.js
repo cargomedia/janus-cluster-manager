@@ -26,7 +26,6 @@ describe('HttpServer', function() {
   before(function() {
     cluster = sinon.createStubInstance(Cluster);
     httpServer = new HttpServer(port, cluster);
-
   });
 
   it('should store port and cluster', function() {
@@ -37,7 +36,7 @@ describe('HttpServer', function() {
   context('when running', function() {
 
     before(function(done) {
-      httpServer.start().then(done);
+      httpServer.start().then(done, done);
     });
 
     context('when receives /register request', function() {
