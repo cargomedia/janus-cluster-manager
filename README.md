@@ -55,13 +55,3 @@ GET /rtpbroadcast/edge-server
   "httpAddress": "<http-address>"
 }
 ```
-
-
-
-
-
-
-
-
-
-
