@@ -1,35 +1,39 @@
 janus-cluster
-========
+=============
 
-## About
-janus-cluster purpose is to manage cluster of janus instances. It's enough to register janus instances and handlers will do all the necessary wiring. Currently we support only **Rtpbroadcast** handler.
+Managing a cluster of janus instances. First Register janus instances through an HTTP endpoint, then let handlers do the necessary wiring.
+Currently there's only one handler available for the [cargomedia/janus-gateway-rtpbroadcast](https://github.com/cargomedia/janus-gateway-rtpbroadcast) plugin.
 
-## Installation
+
+Installation
+------------
 Install as npm package:
 ```
 npm install janus-cluster [-g]
 ```
 
-## Running
 Run service using:
 ```
 bin/janus-cluster --port <http-server-port>
 ```
 
-## Running locally / development
-Clone project, install npm dependencies and run binary
+
+Development
+-----------
+Clone project, install npm dependencies and run binary:
 ```
 npm install
 bin/janus-cluster
 ```
 
 
-## Api
+API
+---
 
 ### Core
 
 #### Register new instance
-Use to register janus instances into the cluster. Each registered instance will also trigger events intercepted by handlers.
+Used to register janus instances into the cluster. Each registered instance will also trigger events intercepted by handlers.
 ```
 POST /register
 ```
