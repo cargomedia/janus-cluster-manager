@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 var Cluster = require('../lib/Cluster');
 var HttpServer = require('../lib/HttpServer');
 
