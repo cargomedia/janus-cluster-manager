@@ -6,7 +6,7 @@
   "license": "MIT",
   "main": "",
   "bin": {
-    "cm-janus": "./bin/janus-cluster"
+    "janus-cluster": "./bin/janus-cluster"
   },
   "keywords": [],
   "repository": {
@@ -21,6 +21,7 @@
     "bluebird": "~3.0.0",
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
+    "janus-gateway-js": "^0.2.3",
     "minimist": "^1.2.0",
     "underscore": "^1.8.3",
     "ws": "~0.8.0"
