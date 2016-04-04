@@ -1,7 +1,11 @@
 #!/usr/bin/env node
+var argv = require('optimist').argv;
+var port = argv.port || 8080;
+
 var Cluster = require('../lib/Cluster');
 var HttpServer = require('../lib/HttpServer');
 
 var cluster = new Cluster();
-var httpServer = new HttpServer(8080, cluster);
+var httpServer = new HttpServer(port, cluster);
 httpServer.start();
+console.log('Started http server at port ' + port);
