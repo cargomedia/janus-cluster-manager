@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- '4.0'
+script: npm run-script test-codecov
+deploy:
+  provider: npm
+  email: tech@cargomedia.ch
+  api_key:
+    secure: hPYCZrjv+BAlPNZ0b2ycOzrcTNcIz86z9LkaC7Wx0ig/TWHUSwrGIBw3BBcEZPBffEI4dGyKNC5g/l3Lfuv+jGynLrCgCGv1+9th2a1arvde97SvczP/MJcBGZ1C9rA8lDvvhhC7RVyGt1A+TtGHyyiOa6IPb0bOTfqTOGxMMZRB2OUmZjbn2aa6fldpay3TXr1k3eMo+K71LV1dfpGnoBG4GKlsb07MhjpHIaLneDT2q8KhiK4BG4gdNTV+kU1m0974ZnaGc1FGo02sAfJGzMIGOYCCHEhyG1zv1E9goz+JUeagts/qRjzLe8IkSOBLG5S9sDQTBASS/GP8TbHLt/XmvII1dnusf3pKNHt1q5RjT+mQr/O42S4fnLJvuyNTuUvrRebM3gBSQ9sjwZzLr3/XFbVbiK4MpayLghrK6WKnS+/Y1CZhN0uCGgSF9tXhN5VTwLhxucdAEP6INkqqWostZq3UA20ZEXlix3sXKWuGJL2mD6w8mFK/JbuQPi8BmQ1scJCnqwsPmCjlTcBWnG08PNtQfWNurK6LBZZLVkD7nNPK9ErU9SHDLpbafCSBrxmqewKbReQRqQJBliAWj0L9NCNNf/oqu8ohwSIlqYl1935UqYSW6+ixBvHvPVf1hE0WGrBcogLgvJJ8C3VR4NSczFTvgAynf8PIn94WmBk=
+  on:
+    tags: true
+    repo: cargomedia/janus-cluster
