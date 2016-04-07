@@ -59,3 +59,18 @@ GET /rtpbroadcast/edge-server
   "httpAddress": "<http-address>"
 }
 ```
+
+Testing
+-------
+To run tests `npm run-script test`
+
+
+Publishing
+----------
+ - update package.json with a new version
+ - release a new git tag with the updated package.json
+
+After that the npm release should be done automatically. If it didn't happen then release it manually:
+```
+npm publish https://github.com/cargomedia/janus-cluster/archive/<GitTagWithUpdatedPackageJson>.tar.gz
+```
