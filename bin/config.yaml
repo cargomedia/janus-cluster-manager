@@ -1,0 +1,3 @@
+logPath: 'log/app.log'
+httpServer:
+  port: 8888

@@ -1,11 +1,13 @@
 #!/usr/bin/env node
-var argv = require('optimist').argv;
-var port = argv.port || 8080;
+var minimist = require('minimist');
+var argv = minimist(process.argv.slice(2));
+var configPath = argv.c || __dirname + '/config.yaml';
+var Config = require('../lib/config');
+var config = Config.createFromFile(configPath).asHash();
 
 var Cluster = require('../lib/Cluster');
 var HttpServer = require('../lib/HttpServer');
 
 var cluster = new Cluster();
-var httpServer = new HttpServer(port, cluster);
+var httpServer = new HttpServer(config.port, cluster);
 httpServer.start();
-console.log('Started http server at port ' + port);
