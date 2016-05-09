@@ -20,6 +20,7 @@
   "dependencies": {
     "bluebird": "~3.0.0",
     "body-parser": "^1.14.1",
+    "deep-extend": "^0.4.1",
     "express": "^4.13.3",
     "janus-gateway-js": "^0.2.3",
     "js-yaml": "^3.6.0",
