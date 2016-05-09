@@ -24,6 +24,7 @@
     "janus-gateway-js": "^0.2.3",
     "js-yaml": "^3.6.0",
     "jsonschema": "^1.1.0",
+    "log4js": "^0.6.36",
     "minimist": "^1.2.0",
     "optimist": "^0.6.1",
     "underscore": "^1.8.3",
