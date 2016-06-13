@@ -20,8 +20,13 @@
   "dependencies": {
     "bluebird": "~3.0.0",
     "body-parser": "^1.14.1",
+    "deep-extend": "^0.4.1",
     "express": "^4.13.3",
     "janus-gateway-js": "^0.2.3",
+    "js-yaml": "^3.6.0",
+    "jsonschema": "^1.1.0",
+    "log4js": "^0.6.36",
+    "minimist": "^1.2.0",
     "optimist": "^0.6.1",
     "underscore": "^1.8.3",
     "ws": "~0.8.0"
