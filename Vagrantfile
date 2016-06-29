@@ -10,7 +10,7 @@ Vagrant.configure('2') do |config|
 
   config.vm.define 'cluster', autostart: true do |config|
     config.vm.box = 'cargomedia/debian-8-amd64-default'
-    config.vm.hostname = 'janus-cluster.dev.cargomedia.ch'
+    config.vm.hostname = 'janus-test-partition.dev.cargomedia.ch'
     config.vm.network :private_network, ip: '10.10.30.10'
 
     config.vm.provision :puppet do |puppet|

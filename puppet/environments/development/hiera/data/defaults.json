@@ -10,13 +10,13 @@
   "janus_cluster::partitions": {
     "space-moon1": {
       "manager": {
-        "cluster_manager_url": "http://example.com"
+        "cluster_manager_url": "http://janus-test-partition.dev.cargomedia.ch:8888"
       },
       "members": {
         "origin1": {
           "type": "origin",
           "params": {
-            "hostname": "localhost",
+            "hostname": "janus-test-partition.dev.cargomedia.ch",
             "recording_enabled": true
           }
         },
@@ -24,14 +24,14 @@
           "type": "repeater",
           "upstream": "origin1",
           "params": {
-            "hostname": "localhost"
+            "hostname": "janus-test-partition.dev.cargomedia.ch"
           }
         },
         "repeater2": {
           "type": "repeater",
           "upstream": "repeater1",
           "params": {
-            "hostname": "localhost",
+            "hostname": "janus-test-partition.dev.cargomedia.ch",
             "ws_port": 8200,
             "http_port": 8210
           }
@@ -41,7 +41,7 @@
           "upstream": "repeater2",
           "count": 10,
           "params": {
-            "hostname": "localhost"
+            "hostname": "janus-test-partition.dev.cargomedia.ch"
           }
         }
       },
