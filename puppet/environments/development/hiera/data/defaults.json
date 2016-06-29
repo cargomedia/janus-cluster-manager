@@ -3,7 +3,8 @@
   "janus_cluster::node::members": [
     "origin1",
     "repeater1",
-    "repeater1-multiedge"
+    "repeater2",
+    "repeater2-multiedge"
   ],
 
   "janus_cluster::partitions": {
@@ -26,9 +27,18 @@
             "hostname": "localhost"
           }
         },
-        "repeater1-multiedge": {
-          "type": "multi-edge",
+        "repeater2": {
+          "type": "repeater",
           "upstream": "repeater1",
+          "params": {
+            "hostname": "localhost",
+            "ws_port": 8200,
+            "http_port": 8210
+          }
+        },
+        "repeater2-multiedge": {
+          "type": "multi-edge",
+          "upstream": "repeater2",
           "count": 10,
           "params": {
             "hostname": "localhost"
@@ -40,8 +50,8 @@
         "http_port": 8010
       },
       "repeater-defaults": {
-        "ws_port": 9000,
-        "http_port": 9010
+        "ws_port": 8100,
+        "http_port": 8110
       },
       "edge-defaults": {
         "http_port": 10500,
