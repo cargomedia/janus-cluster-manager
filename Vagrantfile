@@ -9,10 +9,8 @@ Vagrant.configure('2') do |config|
   config.landrush.tld = 'dev.cargomedia.ch'
 
   config.vm.define 'cluster', autostart: true do |config|
-    config.vm.box = 'cargomedia/debian-8-amd64-plain'
+    config.vm.box = 'cargomedia/debian-8-amd64-default'
     config.vm.hostname = 'janus-cluster.dev.cargomedia.ch'
-
-    config.vm.network :forwarded_port, guest: 22, host: 22120, id: 'ssh'
     config.vm.network :private_network, ip: '10.10.30.10'
 
     config.vm.provision :puppet do |puppet|
