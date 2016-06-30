@@ -37,7 +37,7 @@
           }
         },
         "repeater2-multiedge": {
-          "type": "multi-edge",
+          "type": "multiedge",
           "upstream": "repeater2",
           "count": 10,
           "params": {

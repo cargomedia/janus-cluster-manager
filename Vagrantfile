@@ -1,9 +1,9 @@
 Vagrant.configure('2') do |config|
   config.ssh.forward_agent = true
 
-  #config.librarian_puppet.puppetfile_dir = 'puppet'
-  #config.librarian_puppet.placeholder_filename = '.gitkeep'
-  #config.librarian_puppet.resolve_options = { :force => false }
+  config.librarian_puppet.puppetfile_dir = 'puppet'
+  config.librarian_puppet.placeholder_filename = '.gitkeep'
+  config.librarian_puppet.resolve_options = { :force => true }
 
   config.landrush.enable
   config.landrush.tld = 'dev.cargomedia.ch'
