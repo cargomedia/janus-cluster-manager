@@ -1,11 +1,3 @@
-mod 'cargomedia/janus',
-  :git => 'git@github.com:cargomedia/puppet-packages.git',
-  :path => 'modules/janus'
-
-mod 'cargomedia/janus_cluster_manager',
-  :git => 'git@github.com:cargomedia/puppet-packages.git',
-  :path => 'modules/janus_cluster_manager'
-
 mod 'cargomedia/janus_cluster',
   :git => 'git@github.com:cargomedia/puppet-packages.git',
   :path => 'modules/janus_cluster'
