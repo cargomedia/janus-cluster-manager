@@ -18,8 +18,8 @@ Vagrant.configure('2') do |config|
       puppet.environment = 'development'
       puppet.module_path = ['puppet/modules']
       puppet.manifests_path = 'puppet/environments/development/manifests'
-      puppet.hiera_config_path = "puppet/environments/development/hiera/hiera.yaml"
-      puppet.working_directory = "/tmp/vagrant-puppet"
+      puppet.hiera_config_path = 'puppet/environments/development/hiera/hiera.yaml'
+      puppet.working_directory = '/tmp/vagrant-puppet'
       puppet.manifest_file = 'cluster.pp'
     end
   end
