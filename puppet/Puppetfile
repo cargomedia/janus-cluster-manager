@@ -1,0 +1,3 @@
+mod 'cargomedia/janus_cluster',
+  :git => 'git@github.com:cargomedia/puppet-packages.git',
+  :path => 'modules/janus_cluster'

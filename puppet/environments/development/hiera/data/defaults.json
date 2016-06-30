@@ -1,0 +1,66 @@
+{
+  "janus_cluster::node::partition": "space-moon1",
+  "janus_cluster::node::members": [
+    "origin1",
+    "repeater1",
+    "repeater2",
+    "repeater2-multiedge"
+  ],
+
+  "janus_cluster::partitions": {
+    "space-moon1": {
+      "manager": {
+        "cluster_manager_url": "http://janus-test-partition.dev.cargomedia.ch:8888"
+      },
+      "members": {
+        "origin1": {
+          "type": "origin",
+          "params": {
+            "hostname": "janus-test-partition.dev.cargomedia.ch",
+            "recording_enabled": true
+          }
+        },
+        "repeater1": {
+          "type": "repeater",
+          "upstream": "origin1",
+          "params": {
+            "hostname": "janus-test-partition.dev.cargomedia.ch"
+          }
+        },
+        "repeater2": {
+          "type": "repeater",
+          "upstream": "repeater1",
+          "params": {
+            "hostname": "janus-test-partition.dev.cargomedia.ch",
+            "ws_port": 8200,
+            "http_port": 8210
+          }
+        },
+        "repeater2-multiedge": {
+          "type": "multiedge",
+          "upstream": "repeater2",
+          "count": 10,
+          "params": {
+            "hostname": "janus-test-partition.dev.cargomedia.ch"
+          }
+        }
+      },
+      "origin-defaults": {
+        "ws_port": 8000,
+        "http_port": 8010
+      },
+      "repeater-defaults": {
+        "ws_port": 8100,
+        "http_port": 8110
+      },
+      "edge-defaults": {
+        "http_port": 10500,
+        "ws_port": 10710,
+        "rtp_port_range_min": 30000,
+        "rtp_port_range_max": 50000,
+        "rtpb_minport": 15000,
+        "rtpb_maxport": 25000
+      }
+    }
+  }
+}

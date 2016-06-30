@@ -1,0 +1,11 @@
+---
+:backends:
+  - json
+
+:hierarchy:
+  - defaults
+
+:json:
+  :datadir: /tmp/vagrant-puppet/environments/development/hiera/data
+
+:merge_behavior: deeper
