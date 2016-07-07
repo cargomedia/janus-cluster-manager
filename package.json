@@ -1,17 +1,17 @@
 {
-  "name": "janus-cluster",
+  "name": "janus-cluster-manager",
   "description": "",
   "version": "0.1.1",
   "author": "Cargomedia",
   "license": "MIT",
   "main": "",
   "bin": {
-    "janus-cluster": "./bin/janus-cluster"
+    "janus-cluster": "./bin/janus-cluster-manager"
   },
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git@github.com:cargomedia/janus-cluster.git"
+    "url": "git@github.com:cargomedia/janus-cluster-manager.git"
   },
   "scripts": {
     "test": "$(npm bin)/mocha",

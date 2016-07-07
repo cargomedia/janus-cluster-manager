@@ -1,4 +1,4 @@
-janus-cluster
+janus-cluster-manager
 =============
 
 Managing a cluster of janus instances. First Register janus instances through an HTTP endpoint, then let handlers do the necessary wiring.
@@ -9,12 +9,12 @@ Installation
 ------------
 Install as npm package:
 ```
-npm install janus-cluster [-g]
+npm install janus-cluster-manager [-g]
 ```
 
 Run service using:
 ```
-bin/janus-cluster --port <http-server-port>
+bin/janus-cluster-manager --port <http-server-port>
 ```
 
 
@@ -23,7 +23,7 @@ Development
 Clone project, install npm dependencies and run binary:
 ```
 npm install
-bin/janus-cluster
+bin/janus-cluster-manager
 ```
 
 
@@ -72,5 +72,5 @@ Publishing
 
 After that the npm release should be done automatically. If it didn't happen then release it manually:
 ```
-npm publish https://github.com/cargomedia/janus-cluster/archive/<GitTagWithUpdatedPackageJson>.tar.gz
+npm publish https://github.com/cargomedia/janus-cluster-manager/archive/<GitTagWithUpdatedPackageJson>.tar.gz
 ```
