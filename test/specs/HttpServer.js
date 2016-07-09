@@ -82,6 +82,7 @@ describe('HttpServer', function() {
 
         it('should send error', function(done) {
           requestRegister().then(function(response) {
+            
             expect(response).have.property('error', 'Could not register server: register-error');
             done();
           }).catch(done);
