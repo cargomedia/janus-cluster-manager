@@ -33,8 +33,11 @@ Logger.configure({
 });
 
 var Cluster = require('../lib/Cluster');
+var RtpbroadcastReplication = require('./Handler/RtpbroadcastReplication');
 var HttpServer = require('../lib/HttpServer');
 
 var cluster = new Cluster();
+cluster.plugins.push(new RtpbroadcastReplication(cluster));
+
 var httpServer = new HttpServer(config.httpServer.port, cluster);
 httpServer.start();
