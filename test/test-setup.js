@@ -1,4 +1,4 @@
-var Logger = require('../lib/logger');
+var Logger = require('../lib/Logger');
 Logger.configure({
   "appenders": [
     {

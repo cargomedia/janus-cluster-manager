@@ -2,10 +2,10 @@
 var minimist = require('minimist');
 var argv = minimist(process.argv.slice(2));
 var configPath = argv.c || __dirname + '/config.yaml';
-var Config = require('../lib/config');
+var Config = require('../lib/Config');
 var config = Config.createFromFile(configPath).asHash();
 
-var Logger = require('../lib/logger');
+var Logger = require('../lib/Logger');
 Logger.configure({
   "appenders": [
     {
