@@ -7,7 +7,7 @@ var Promise = require('bluebird');
 
 var HttpServer = require('../../lib/HttpServer');
 var Cluster = require('../../lib/Cluster');
-var JanusServer = require('../../lib/JanusServer');
+var Member = require('../../lib/Member');
 
 var port = 8888;
 
@@ -55,7 +55,7 @@ describe('HttpServer', function() {
         requestRegister().finally(function() {
           expect(cluster.register.callCount).to.be.equal(1);
           var server = cluster.register.firstCall.args[0];
-          expect(server).to.be.instanceOf(JanusServer);
+          expect(server).to.be.instanceOf(Member);
           expect(server.id).to.be.equal('server-id');
           expect(server.webSocketAddress).to.be.equal('websocket-address');
           expect(server.data).to.be.equal('additional-data');
@@ -66,7 +66,7 @@ describe('HttpServer', function() {
       context('on successful cluster register', function() {
         it('should send success', function(done) {
           requestRegister().then(function(response) {
-            expect(response).have.property('success', 'Server registered');
+            expect(response).have.property('success', 'Member registered');
             done();
           }).catch(done);
         });
@@ -84,7 +84,7 @@ describe('HttpServer', function() {
         it('should send error', function(done) {
           requestRegister().then(function(response) {
             
-            expect(response).have.property('error', 'Could not register server: register-error');
+            expect(response).have.property('error', 'Could not register member: register-error');
             done();
           }).catch(done);
         });
