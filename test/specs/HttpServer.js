@@ -45,7 +45,7 @@ describe('HttpServer', function() {
       var requestRegister;
 
       before(function() {
-        cluster.register.returns(Promise.resolve());
+        cluster.registerMember.returns(Promise.resolve());
         requestRegister = function() {
           return request('POST', 'register', {id: 'server-id', webSocketAddress: 'websocket-address', data: 'additional-data'});
         }
@@ -53,8 +53,8 @@ describe('HttpServer', function() {
 
       it('should register', function(done) {
         requestRegister().finally(function() {
-          expect(cluster.register.callCount).to.be.equal(1);
-          var server = cluster.register.firstCall.args[0];
+          expect(cluster.registerMember.callCount).to.be.equal(1);
+          var server = cluster.registerMember.firstCall.args[0];
           expect(server).to.be.instanceOf(Member);
           expect(server.id).to.be.equal('server-id');
           expect(server.webSocketAddress).to.be.equal('websocket-address');
@@ -75,8 +75,8 @@ describe('HttpServer', function() {
       context('on unsuccessful register', function() {
 
         beforeEach(function() {
-          cluster.register.restore();
-          sinon.stub(cluster, 'register', function() {
+          cluster.registerMember.restore();
+          sinon.stub(cluster, 'registerMember', function() {
             return Promise.reject(new Error('register-error'));
           });
         });
