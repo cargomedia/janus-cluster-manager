@@ -37,7 +37,7 @@ var RtpbroadcastReplication = require('./Handler/RtpbroadcastReplication');
 var HttpServer = require('../lib/HttpServer');
 
 var cluster = new Cluster();
-cluster.plugins.push(new RtpbroadcastReplication(cluster));
+cluster.registerPlugin(new RtpbroadcastReplication());
 
 var httpServer = new HttpServer(config.httpServer.port, cluster);
 httpServer.start();
