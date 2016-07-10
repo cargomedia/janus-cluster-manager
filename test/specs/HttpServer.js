@@ -26,6 +26,7 @@ describe('HttpServer', function() {
 
   before(function() {
     cluster = sinon.createStubInstance(Cluster);
+    cluster.plugins = [];
     httpServer = new HttpServer(port, cluster);
   });
 
