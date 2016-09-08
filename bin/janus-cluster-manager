@@ -4,6 +4,7 @@ var argv = minimist(process.argv.slice(2));
 var configPath = argv.c || __dirname + '/config.yaml';
 var Config = require('../lib/Config');
 var config = Config.createFromFile(configPath).asHash();
+var port = argv.port || 8888;
 
 var Logger = require('../lib/Logger');
 Logger.configure({
@@ -39,5 +40,5 @@ var HttpServer = require('../lib/HttpServer');
 var cluster = new Cluster();
 cluster.registerPlugin(new RtpbroadcastReplication(cluster));
 
-var httpServer = new HttpServer(config.httpServer.port, cluster);
+var httpServer = new HttpServer(port, cluster);
 httpServer.start();
