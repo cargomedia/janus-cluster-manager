@@ -1,12 +1,12 @@
 {
   "name": "janus-cluster-manager",
   "description": "",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "author": "Cargomedia",
   "license": "MIT",
   "main": "",
   "bin": {
-    "janus-cluster": "./bin/janus-cluster-manager"
+    "janus-cluster-manager": "./bin/janus-cluster-manager"
   },
   "keywords": [],
   "repository": {
