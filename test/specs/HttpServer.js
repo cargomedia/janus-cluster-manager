@@ -9,7 +9,7 @@ var HttpServer = require('../../lib/HttpServer');
 var Cluster = require('../../lib/Cluster');
 var Member = require('../../lib/Member');
 
-var port = 8888;
+var port = 8800;
 
 var request = function(method, path, data) {
   var options = {
